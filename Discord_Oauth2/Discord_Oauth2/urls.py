@@ -19,5 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', include('DiscOauth2_app.urls')),
+    path('second/', include('githubaccount.urls')),
+
 ]
