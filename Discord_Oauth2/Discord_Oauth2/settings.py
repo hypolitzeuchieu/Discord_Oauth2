@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.google',
 ]
 
 SITE_ID = 1
@@ -70,6 +72,13 @@ SOCIALACCOUNT_PROVIDERS = {
         'APP': {
             'client_id': '9ff86e0c424cc0b60fa0',
             'secret': 'd097211db2ba34916665ecd8a7d69b483e50afd2',
+            'key': ''
+        }
+    },
+    'google': {
+        'APP': {
+            'client_id': '1065671480070-drrpbsnof954n2roajohsbf6aaohml5r.apps.googleusercontent.com',
+            'secret': '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',
             'key': ''
         }
     }
@@ -160,3 +169,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

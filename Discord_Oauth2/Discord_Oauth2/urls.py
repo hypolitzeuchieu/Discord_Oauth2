@@ -24,3 +24,4 @@ urlpatterns = [
     path('second/', include('githubaccount.urls')),
 
 ]
+
